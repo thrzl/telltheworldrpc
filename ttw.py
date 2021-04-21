@@ -4,6 +4,9 @@ import json
 from PyQt5 import QtWidgets, uic
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
+from PyQt5.QtWinExtras import QtWin
+myappid='deflop.telltheworld.0.1'
+QtWin.setCurrentProcessExplicitAppUserModelID(myappid)
 
 from pypresence import Presence
 

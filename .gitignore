@@ -1,1 +1,4 @@
 ttw.db
+build/*
+dist/*
+__pycache__/ttw.cpython-39.pyc
