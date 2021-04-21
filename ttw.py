@@ -1,10 +1,15 @@
 import sys
 import os
 import json
+import ctypes
 from PyQt5 import QtWidgets, uic
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
 from PyQt5.QtWinExtras import QtWin
+
+if not ctypes.windll.shell32.IsUserAnAdmin():
+    ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, " ".join(sys.argv), None, 1)
+
 myappid='deflop.telltheworld.0.1'
 QtWin.setCurrentProcessExplicitAppUserModelID(myappid)
 
